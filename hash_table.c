@@ -309,10 +309,7 @@ acceptable.  Do NOT use for cryptographic purposes.
 --------------------------------------------------------------------
 */
 
-static ub4 jenkins_hash(k, length, initval)
-	 register const ub1 *k;	/* the key */
-	 register ub4 length;	/* the length of the key */
-	 register ub4 initval;	/* the previous hash, or an arbitrary value */
+static ub4 jenkins_hash(const ub1 *k, ub4 length, ub4 initval)
 {
 	register ub4 a, b, c, len;	/* Set up the internal state */
 	len = length;
